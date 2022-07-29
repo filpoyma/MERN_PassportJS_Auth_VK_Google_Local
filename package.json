@@ -8,7 +8,7 @@
     "node": "16.x"
   },
   "scripts": {
-    "prod": "cd client && npm run build && cd .. && nodemon index.js",
+    "prod": "cd client && npm run build && cd .. && node index.js",
     "dev": "npm-run-all --parallel dev-back dev-front",
     "dev-back": "nodemon app.js",
     "dev-front": "cd client && (COLOR=1 npm run start | cat)",

@@ -6,11 +6,11 @@
 - установите БД mongoDB в систему
     https://www.mongodb.com/docs/upcoming/administration/install-community/
 
-- установите зависимости командой `npm run instdepend`
+- установите зависимости командой `npm run instdep`
 - создайте файл .env на основе env.example
 - в панеле разработчика  vk и google создайте 
     googleClientID, googleClientSecret, vkClientID, vkClientSecret
-    и пропишите их в .env файд
+    и пропишите их в .env файл
     
     - https://vk.com/apps?act=manage
     - https://console.cloud.google.com/apis/credentials
