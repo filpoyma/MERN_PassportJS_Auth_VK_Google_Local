@@ -21,9 +21,9 @@ import notFoundMiddleware from './middlewares/notfound404.js';
 import errorMiddleware from './middlewares/error.js';
 
 const app = express();
-const dirname = path.resolve();
 
-app.use(express.static(path.join(dirname, 'client', 'build')));
+
+app.use(express.static(path.resolve('client', 'build')));
 app.use(express.json());
 app.use(morgan('dev'));
 
@@ -59,7 +59,7 @@ app.use('/api', indexRouter);
 app.use('/api/auth', authRouter);
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(dirname, 'client', 'build', 'index.html'));
+  res.sendFile(path.resolve('client', 'build', 'index.html'));
 });
 
 // союда программа дойдет, если не сработает ни один роут.
