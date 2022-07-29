@@ -2,7 +2,7 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import Context from "../../context"
 
-const SignIn = () => {
+const SignOut = () => {
   const history = useHistory();
   const { setAuth } = React.useContext(Context);
 
@@ -34,4 +34,4 @@ const SignIn = () => {
 
 }
 
-export default SignIn
+export default SignOut;

@@ -2,19 +2,25 @@
 
 Данный репозиторий содержит пример реализации аутентификации с помощью `passportjs express`.
 
-Совсем не обязательно использовать все концепции, применённые здесь, при обучении.
-Но в реальном проекте было бы неплохо.
-
 Для запуска проекта локально 
-- установите зависимости командой `npm run depend`
+- установите БД mongoDB в систему
+    https://www.mongodb.com/docs/upcoming/administration/install-community/
+
+- установите зависимости командой `npm run instdepend`
 - создайте файл .env на основе env.example
-- укажите в панели разработчика vk и google сервисов соответственные callbackURL
-- запустите проект коммандой `npm run dev`
+- в панеле разработчика  vk и google создайте 
+    googleClientID, googleClientSecret, vkClientID, vkClientSecret
+    и пропишите их в .env файд
+    
+    - https://vk.com/apps?act=manage
+    - https://console.cloud.google.com/apis/credentials
+    
+- укажите в панели разработчика vk и google сервисов соответственные callbackURL 
+- запустите проект коммандой `npm run prod` проект скомпилируется и запуститься.
 - в браузере перейдите на адрес `localhost:3100`
+- `npm run dev` запускает проект в режиме разработки
 
+- при заливке проекта на сервер поменяйте callbackUrl в панелях разработчика. 
+    Также смените адрес в файле \client\src\api\urls.js
 
-## Какие темы полезно разобрать
-
-* [Bcrypt](https://github.com/kelektiv/node.bcrypt.js)
-* [Constraint validation](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation)
-# MERN_passportjs_auth
+#MERN #nodejs #React #passportJs
