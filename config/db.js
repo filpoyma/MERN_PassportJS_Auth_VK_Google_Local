@@ -5,11 +5,7 @@ dotenv.config();
 
 // подключаем базу данных
 mongoose
-  .connect(process.env.DB_PATH, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true,
-  })
+  .connect(process.env.DB_PATH)
   .then(() => {
     console.log('Mongoose connected to %s database', process.env.DB_PATH);
   })

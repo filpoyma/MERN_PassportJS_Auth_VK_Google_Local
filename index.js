@@ -23,7 +23,7 @@ import errorMiddleware from './middlewares/error.js';
 const app = express();
 const dirname = path.resolve();
 
-app.use(express.static(path.join(dirname, 'client', 'build'))); // middlewares
+app.use(express.static(path.join(dirname, 'client', 'build')));
 app.use(express.json());
 app.use(morgan('dev'));
 
@@ -71,5 +71,5 @@ app.use(errorMiddleware);
 
 const port = process.env.PORT ?? 3100;
 app.listen(port, () => {
-  console.log('Сервер запущен. Порт:', port);
+  console.log('Сервер запущен. http://localhost:%s', port);
 });
